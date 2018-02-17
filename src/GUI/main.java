@@ -25,6 +25,9 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import javax.swing.ListModel;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.table.DefaultTableModel;
 import model.DBConnection;
 
@@ -104,6 +107,7 @@ public class main extends javax.swing.JFrame {
         
         ListRoom.setModel(new DefaultComboBoxModel<>(phongListSelect));
         jTable2.setModel(new DefaultTableModel(tablePhong, tenCotPhong));
+        
         
     }
 
@@ -983,9 +987,9 @@ public class main extends javax.swing.JFrame {
         int id = ListMedical.getSelectedIndex();
         HoaChat tmp = mainDataChat.elementAt(id);
         khoiLuongRiengLabel.setText("Khối lượng riêng: "+tmp.getKhoiLuongRieng() + "");
-        nhietChayThapLabel.setText("Nhiệt chảy thấp: " +tmp.getNhietChayThap() + "");
+        nhietChayThapLabel.setText("Nhiệt lượng cháy: " +tmp.getNhietChayThap() + "");
         khoiLuongRiengLabel1.setText("Khối lượng riêng: "+tmp.getKhoiLuongRieng() + "");
-        nhietChayThapLabel1.setText("Nhiệt chảy thấp: " +tmp.getNhietChayThap() + "");
+        nhietChayThapLabel1.setText("Nhiệt lượng cháy: " +tmp.getNhietChayThap() + "");
     }//GEN-LAST:event_ListMedicalMouseClicked
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
